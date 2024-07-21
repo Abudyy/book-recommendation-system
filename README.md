@@ -2,7 +2,7 @@
 
 (WIP)
 
-Project done by Hamza Pathan and Abdullah Paracha
+Project by Hamza Pathan and Abdullah Paracha
 
 This project is a machine learning-based book recommendation system. The system uses various machine learning algorithms to analyze large datasets of books, ratings and users, and recommend books that are likely to be of interest to the user.
 
