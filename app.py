@@ -5,6 +5,17 @@ import numpy as np
 
 app = Flask(__name__)
 
+import os
+
+# Get the current directory of the app.py file
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Load .pkl files from the static folder
+popularityDF = joblib.load(open(os.path.join(base_dir, 'static/popularity.pkl'), 'rb'))
+finalTable = joblib.load(open(os.path.join(base_dir, 'static/final.pkl'), 'rb'))
+books = joblib.load(open(os.path.join(base_dir, 'static/books.pkl'), 'rb'))
+similarScores = joblib.load(open(os.path.join(base_dir, 'static/similarity_scores.pkl'), 'rb'))
+
 # Load trained models and data
 popularityDF = joblib.load(open("/Users/abdullah/ProjectML/book-recommendation-system/popularity.pkl", "rb"))
 finalTable = joblib.load(open('/Users/abdullah/ProjectML/book-recommendation-system/final.pkl', 'rb'))
